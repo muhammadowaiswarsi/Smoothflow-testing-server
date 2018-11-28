@@ -1,11 +1,13 @@
 
 var express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 var app = express();
 
 app
 .use(bodyParser.json())
 .use(express.static('build'))
+.use(cors())
 
 
 
